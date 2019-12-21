@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/resources/css/font-awesome.min.css}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" th:href="@{/resources/css/ionicons.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/resources/css/adminlte.min.css}">
+
+</head>
+
+<body>
+
+    <h1 class="text-center">User注册</h1>
+    <div class="container-fluid">
+        <div class="col-4"></div>
+        <div class="table-responsive col-4 m-auto">
+            <form action="/user/register" method="post">
+                <input type="hidden" name="user_id" >
+                <div class="form-group">
+                    <label>username</label>
+                    <input type="text" class="form-control" name="username">
+                </div>
+                <div class="form-group">
+                    <label>password</label>
+                    <input type="text" class="form-control" name="password">
+                </div>
+                <div class="form-group">
+                    <label>sex</label>
+                    <select name="sex" class="form-control">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label>realName</label>
+                    <input type="text" class="form-control" name="realName">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success" value="注册">
+                </div>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+
+</body>
+<!-- jQuery -->
+<script th:src="@{/resources/plugins/jquery/jquery.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{/resources/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/resources/js/plugins/particles.js}"></script>
+<script th:src="@{/resources/js/plugins/login-bg-particles.js}"></script>
+
+</html>
